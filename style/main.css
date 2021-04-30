@@ -14,17 +14,27 @@ body {
   font-family: 'Roboto', sans-serif;
   color: white;
 }
-
+.container {
+  width: 100%;
+  margin: 0;
+  padding-left: 30px;
+}
 header .container {
   display: flex;
-  align-items: center;
-  margin: 5px 15px;
+  align-items: flex-start;
+  position: fixed;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.808) 0%,
+    rgba(27, 27, 27, 0.082) 100%
+  );
 }
 
 #logo img {
-  margin-left: 5px;
+  margin-left: 0px;
   margin-top: 10px;
-  height: 25px;
+  height: 30px;
 }
 
 header nav a {
@@ -47,7 +57,7 @@ nav {
 
 .filme-principal {
   font-size: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9) 100%),
     url('/img/capa-Mulher-Maravilha.jpg');
 
   height: 400px;
@@ -109,4 +119,19 @@ nav {
   height: 20%;
   width: 20%;
   display: block;
+  position: relative;
+}
+
+.box-filme ::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-filmes {
+  margin-top: 2px;
 }
